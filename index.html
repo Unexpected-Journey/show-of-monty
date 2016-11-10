@@ -35,18 +35,8 @@
 	function btn_click(c) { 
 	var id = "" + c; 
 	feeling(id);
-   // show(id,idi);
 	}
-	/*function show(id,idi) {
-	    var img = document.getElementById(id);
-		img.setAttribute("src", "images/open2.png");
-		var b = document.getElementById(idi);
-		//b.disabled = true;
-
-		b.createElement("disabled");
-		b.setAttribute("disabled");
-	}*/
-	//start of the main part
+	
 	
 
 	function getRandomInt(min, max)
@@ -76,22 +66,16 @@
 
 	function vibor(id)
 	{
-			//var nd = parseInt(prompt("Выберите вашу дверь (1,2,3):"));
-		alert("Выберите вашу дверь (1,2,3):")
 		//Внесенная часть
 		var imgs = document.getElementById(id);
-		//imgs.
 		nummy = parseInt(id);
 		nd = nummy + 1; 
 		var nf=nd-1;
 		if (nf>=0 && nf<3)
 		{
-			return nd;		}
-		else
-		{
-			alert("На вашем месте я бы выбрал дверь");
-			vibor();
+			return nd;
 		}
+		
 	}
 
 	function minRz(nd,a,min,max)
@@ -152,15 +136,6 @@
 	{
 		nd=nf+1;
 		var otv2 = prompt("Вы точно уверены, что приз за " + nd + " дверью? Да/Нет");
-		//---------------------------------------
-		/*for(var i = 0; i<a.length; i++)
-		{
-			if(a[i] == 1)
-			{
-				var pob = i;
-			}
-		}*/
-		//---------------------------------------
 		if (otv2 == "Да")
 		{
 			if(a[nf] == 1)
