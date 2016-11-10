@@ -31,14 +31,176 @@
 	</div>
 </body>
 <script>
-	var fld = [" ", " ", " "];
+	//var fld = [" ", " ", " "];
 	function btn_click(c) { 
-	var id = "" + c;
-    show(id);
+	var id = "" + c; 
+	feeling(id);
+   // show(id,idi);
 	}
-	function show(id) {
+	/*function show(id,idi) {
 	    var img = document.getElementById(id);
 		img.setAttribute("src", "images/open2.png");
+		var b = document.getElementById(idi);
+		//b.disabled = true;
+
+		b.createElement("disabled");
+		b.setAttribute("disabled");
+	}*/
+	//start of the main part
+	
+
+	function getRandomInt(min, max)
+	{
+
+	  	return Math.floor(Math.random() * (max - min + 1)) + min;
+
+	}	
+
+	function feeling(id)
+	{
+		var a = new Array();
+		var min = 0;
+		var max = 2;
+		var t = getRandomInt(min,max); //Door of win
+		a[t]=1;
+		for(var i = 0; i<3; i++)
+		{
+			if(a[i]!=1)
+			{
+				a[i] = 0;
+			}
+		}
+		var nd = vibor(id);   // Выбор двери пользователем
+		minRz(nd,a,min,max);
 	}
+
+	function vibor(id)
+	{
+			//var nd = parseInt(prompt("Выберите вашу дверь (1,2,3):"));
+		alert("Выберите вашу дверь (1,2,3):")
+		//Внесенная часть
+		var imgs = document.getElementById(id);
+		//imgs.
+		nummy = parseInt(id);
+		nd = nummy + 1; 
+		var nf=nd-1;
+		if (nf>=0 && nf<3)
+		{
+			return nd;		}
+		else
+		{
+			alert("На вашем месте я бы выбрал дверь");
+			vibor();
+		}
+	}
+
+	function minRz(nd,a,min,max)
+	{
+		var nf=nd-1;
+		var minRz = 3-nf;
+		var e1;
+		var e2;
+		if (minRz == 3)
+		{
+			e1 = 1;
+			e2 = 2; 
+		}	
+		else
+		{
+			if(minRz==2)
+			{
+				e1 = 0;
+				e2 = 2;
+			}
+			else
+			{
+				e1 = 0;
+				e2 = 1;
+			}
+		}
+		var prOTV = randomA(min, max, e1, e2);   
+		prOTV++;
+		alert("Диск за " + prOTV + " дверью.");
+		prOTV--;
+		openDisk(prOTV, a, nf);
+	}
+
+	function randomA(min, max, e1, e2)			
+	{
+		var cc = Math.floor(Math.random());
+		if (cc == 0)
+		{
+			return e1;
+		}
+		else
+		{
+			return e2;
+		}
+	}	
+	function openDisk(prOTV,a,nf)
+	{
+		var img = document.getElementById(prOTV);
+		img.setAttribute("src", "images/open2.png");
+		rezultat(a,nf);
+	}	
+	
+	
+	
+	
+		
+	function rezultat(a,nf)
+	{
+		nd=nf+1;
+		var otv2 = prompt("Вы точно уверены, что приз за " + nd + " дверью? Да/Нет");
+		//---------------------------------------
+		/*for(var i = 0; i<a.length; i++)
+		{
+			if(a[i] == 1)
+			{
+				var pob = i;
+			}
+		}*/
+		//---------------------------------------
+		if (otv2 == "Да")
+		{
+			if(a[nf] == 1)
+			{
+				alert('You won, body! Grats!');
+				openPrize(nf);
+			}
+			else
+			{
+				alert('You lose(');
+				openDisk1(nf);	
+			}
+		}
+		else
+		{
+			var newnb = parseInt(prompt("Ну и какой номер вы выберете?"));
+			newnb--;
+			if (a[newnb]==1)
+			{
+				alert('You win, body! Grats!');
+				openPrize(newnb);
+			}
+			else
+			{
+				alert('You lose(');	
+				openDisk1(nf);
+			}	
+		}
+	}
+	function openPrize(pob)
+	{
+		var img = document.getElementById(pob);
+		img.setAttribute("src", "images/open1.png");
+	
+	}
+
+	function openDisk1(pob)
+	{
+		var img = document.getElementById(pob);
+		img.setAttribute("src", "images/open2.png");
+	}	
 </script>
 </html>
