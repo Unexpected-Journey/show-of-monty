@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Шоу Монти Холла</title>
+</head>
+<body>
+	<div id="docum">
+		<header class="header">
+			<h1>Шоу Монти Холла</h1>
+		</header>
+		<main>
+			<div class="dveri">
+				<table>
+					<tr class="tabla1">
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+					</tr>
+					<tr class="tabla2">
+						<td><button onclick="btn_click(0)"><img id="0" src="images/closed.png" alt="dveri"></button></td>
+						<td><button onclick="btn_click(1)"><img id="1" src="images/closed.png" alt="dveri"></button></td>
+						<td><button onclick="btn_click(2)"><img id="2" src="images/closed.png" alt="dveri"></button></td>
+					</tr>
+				</table>
+			</div>
+		</main>
+		<footer class="footer">
+
+		</footer>
+	</div>
+</body>
+<script>
+	var fld = [" ", " ", " "];
+	function btn_click(c) { 
+	var id = "" + c;
+    show(id);
+	}
+	function show(id) {
+	    var img = document.getElementById(id);
+		img.setAttribute("src", "images/open2.png");
+	}
+</script>
+</html>
