@@ -1,0 +1,140 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Start*/
+body{
+	background: #fffaf0;
+}
+.docum{
+	display: block;	
+	margin: 0 auto;
+	
+}
+
+.header{
+	display: block;	
+	padding: 100px, 100px;
+	/*border-bottom: 2px solid #f06;*/
+}
+.h1Header{
+	font-size: 25px;
+	padding: 20px 0px;
+	font-family: Arial, Helvetica, sans-serf;
+	text-align: center;
+	color: #f06;
+}
+.h1Up:hover{
+	color: #dfdfdf;
+}
+
+.h1Up:active{
+	color: #f06;
+}
+
+.h1Up:visited{
+	color: #f06;
+}
+
+.dveri{
+	display: table;
+	margin: 23px auto;
+}
+table {	
+    width: 300px; 
+    
+   }
+td {
+    text-align: center;
+    font-size: 20px;
+    color: orange; 
+}
+.h2First{
+	font-size: 25px;
+	padding: 20px 0px;
+	font-family: Arial, Helvetica, sans-serf;
+	text-align: center;
+	color: #f06;
+}
+.Jg:hover{
+	color: #dfdfdf;
+}
+
+.Jg:active{
+	color: #f06;
+}
+
+.Jg:visited{
+	color: #f06;
+}
+
+.pFirst{
+	text-align: center;
+	font-size: 15px;
+	padding: 5px 0px;
+	font-family: Arial, Helvetica, sans-serf;
+	color: #000;
+
+}
+.tss{
+	text-align: center;
+	font-size: 15px;
+	padding: 15px 0px 10px 0px;
+	font-family: Arial, Helvetica, sans-serf;
+	color: #f06;	
+}
+
+#scrollup {
+position: fixed; /* фиксированная позиция */
+opacity: 0.8; /* прозрачность */
+padding: 15px 10px 10px; /* отступы */
+background: #aaa;
+border-radius: 5px; /* скругление углов */
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+left: 25px; /* отступ слева */
+bottom: 20px; /* отступ снизу */
+display: none; /* спрятать блок */
+cursor: pointer;
+}
+

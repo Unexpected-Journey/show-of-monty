@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+	<link rel="icon" href="images/logo.png "/>
 	<meta charset="UTF-8">
-	<title>Шоу Монти Холла</title>
+	<title>Let's Make a Deal</title>
+	<link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
 	<div id="docum">
 		<header class="header">
-			<h1>Шоу Монти Холла</h1>
+			<h1 class="h1Header"><a class="h1Up" href="index.html">Let's Make a Deal</a></h1>
 		</header>
 		<main>
 			<div class="dveri">
@@ -24,14 +26,26 @@
 					</tr>
 				</table>
 			</div>
+			<div class="text1">
+				<h2 class="h2First"><a class="Jg" href="#Rules">Rules</a></h2>
+				<a name="Rules"></a>
+				<p class="pFirst">The rules are simply:</p>
+				<p class="pFirst">1) You have 3 doors. Chose the door where is your prize. </p>
+				<p class="pFirst">2) You can change your mind, when you are allowed to do it </p>
+				<p class="pFirst">3) Enjoy!!! </p>
+			</div>
+			</div>
+
 		</main>
 		<footer class="footer">
-
+			<script type='text/javascript' src='http://code.jquery.com/jquery-latest.min.js'></script>
+			<script type='text/javascript' src='js/scrollup.js'></script>
+			<div id="scrollup"><img alt="Прокрутить вверх" src="images/up.png"></div>
+			<p class="tss">© 2016 Let's Make a Deal </p>
 		</footer>
 	</div>
 </body>
 <script>
-	//var fld = [" ", " ", " "];
 	function btn_click(c) { 
 	var id = "" + c; 
 	feeling(id);
@@ -161,7 +175,7 @@
 			else
 			{
 				alert('You lose(');	
-				openDisk1(nf);
+				openDisk1(newnb);
 			}	
 		}
 	}
