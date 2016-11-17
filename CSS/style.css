@@ -125,6 +125,40 @@ td {
 	color: #000;
 
 }
+.h2Second{
+	font-size: 25px;
+	padding: 20px 0px;
+	font-family: Arial, Helvetica, sans-serf;
+	text-align: center;
+	color: #f06;
+}
+.pSecond{
+	text-align: center;
+	font-size: 15px;
+	padding: 5px 0px;
+	font-family: Arial, Helvetica, sans-serf;
+	color: #000;
+}
+.text2{
+	text-align: center;
+}
+.anotherSite{
+	font-size: 20px;
+	padding-top: 5px;
+}
+.anotherSite:hover{
+	color: #dfdfdf;
+}
+
+.anotherSite:active{
+	color: #f06;
+}
+
+.anotherSite:visited{
+	color: #f06;
+}
+
+
 .tss{
 	text-align: center;
 	font-size: 15px;
