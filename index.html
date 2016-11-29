@@ -62,7 +62,13 @@
 </body>
 <script>
 	function btn_click(c) { 
-	var id = "" + c; 
+	var id = "" + c;
+	var pr1 = document.getElementById(0);
+	var pr2 = document.getElementById(1);
+	var pr3 = document.getElementById(2);
+	pr1.setAttribute("src", "images/closed.png");
+	pr2.setAttribute("src", "images/closed.png");
+	pr3.setAttribute("src", "images/closed.png"); 
 	feeling(id);
 	}
 	
