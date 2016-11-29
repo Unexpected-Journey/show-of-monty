@@ -55,6 +55,9 @@ body{
 	text-align: center;
 	color: #f06;
 }
+.h1Up{
+	color: #f06;
+}
 .h1Up:hover{
 	color: #dfdfdf;
 }
