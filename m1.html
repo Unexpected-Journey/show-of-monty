@@ -64,13 +64,13 @@
                 var res = game(count);
                 var changeOkProb = res.changedAndWon / ((res.changedAndLost + res.changedAndWon) > 0 ? (res.changedAndLost + res.changedAndWon) : 1);
                 var keepOkProb = res.keepAndWon / ((res.keepAndWon + res.keepAndLost) > 0 ? (res.keepAndWon + res.keepAndLost) : 1);
-                var text = "<tr><td>Количество попыток: " + "</td><td><b>" + count + "</b></td></tr>";
-                text += "<tr><td>Не изменил решение и выиграл: " + "</td><td>" + res.keepAndWon + "</td></tr>";
-                text += "<tr><td>Не изменил решение и проиграл: " + "</td><td>" + res.keepAndLost + "</td></tr>";
-                text += "<tr><td>Изменил решение и выиграл: " + "</td><td>" + res.changedAndWon + "</td></tr>";
-                text += "<tr><td>Изменил решение и проиграл: " + "</td><td>" + res.changedAndLost + "</td></tr>";
-                text += "<tr><td>Вероятность выиграть, при изменении решения: " + "</td><td>" + "<b>" + (Math.round(changeOkProb * 10000) / 100) + "%</b>" + "</td></tr>";
-                text += "<tr><td>Вероятность выиграть, без изменения решения: " + "</td><td>" + "<b>" + (Math.round(keepOkProb * 10000) / 100) + "%</b>" + "</td></tr>";
+                var text = "<tr><td>The number of attempts: " + "</td><td><b>" + count + "</b></td></tr>";
+                text += "<tr><td>Didn't change the dicision and won: " + "</td><td>" + res.keepAndWon + "</td></tr>";
+                text += "<tr><td>Didn't change the dicision and lost:  " + "</td><td>" + res.keepAndLost + "</td></tr>";
+                text += "<tr><td>Changed the dicision and won: " + "</td><td>" + res.changedAndWon + "</td></tr>";
+                text += "<tr><td>Changed the dicision and lost: " + "</td><td>" + res.changedAndLost + "</td></tr>";
+                text += "<tr><td>The probability of winning, changing solutions: " + "</td><td>" + "<b>" + (Math.round(changeOkProb * 10000) / 100) + "%</b>" + "</td></tr>";
+                text += "<tr><td>The probability of winning, without changing solutions: " + "</td><td>" + "<b>" + (Math.round(keepOkProb * 10000) / 100) + "%</b>" + "</td></tr>";
                 document.getElementById(divId).innerHTML = "<table>" + text + "</table>";
             }
         </script>
@@ -81,10 +81,10 @@
             <header class="header">
                 <h1 class="h1Header"><a class="h1Up" href="index.html">Let's Make a Deal</a></h1>
             </header>        
-            <h1 class="hm">Парадокс Монти Холла</h1>
-            Количество попыток:
+            <h1 class="hm">Monty Hall problem</h1>
+            The number of attempts:
             <input type="text" value="100" id="tries" />
-            <input type="button" value="Запустить"	onClick="presentGame(document.getElementById('tries').value, 'data');" />
+            <input type="button" value="Start"	onClick="presentGame(document.getElementById('tries').value, 'data');" />
             <br />
             <div id="data"></div>
         </div>

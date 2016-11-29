@@ -133,7 +133,8 @@
 		}
 		var prOTV = randomA(min, max, e1, e2);   
 		prOTV++;
-		alert("Диск за " + prOTV + " дверью.");
+		//alert("Диск за " + prOTV + " дверью.");
+		alert("The disk is behind " + prOTV + " door.");
 		prOTV--;
 		openDisk(prOTV, a, nf);
 	}
@@ -164,8 +165,9 @@
 	function rezultat(a,nf)
 	{
 		nd=nf+1;
-		var otv2 = prompt("Вы точно уверены, что приз за " + nd + " дверью? Да/Нет");
-		if (otv2 == "Да" || otv2 == "да" || otv2 == "дА" || otv2 == "ДА")
+		//var otv2 = prompt("Вы точно уверены, что приз за " + nd + " дверью? Да/Нет");
+		var otv2 = prompt("Are you really sure that the price is behind " + nd + " door? Yes/No");
+		if (otv2 == "Yes" || otv2 == "yEs" || otv2 == "yeS" || otv2 == "YEs" || otv2 == "yES" || otv2 == "YeS" || otv2 == "YES" || otv2 == "yes")
 		{
 			if(a[nf] == 1)
 			{
@@ -180,7 +182,8 @@
 		}
 		else
 		{
-			var newnb = parseInt(prompt("Ну и какой номер вы выберете?"));
+			//var newnb = parseInt(prompt("Ну и какой номер вы выберете?"));
+			var newnb = parseInt(prompt("Well, what number would you choose?"));
 			newnb--;
 			if (a[newnb]==1)
 			{
