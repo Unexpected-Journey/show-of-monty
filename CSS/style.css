@@ -63,6 +63,9 @@ body{
 	text-align: center;
 	color: #f06;
 }
+.h1{
+	color:#f06;
+}
 .h1Up:hover{
 	color: #dfdfdf;
 }
@@ -105,6 +108,9 @@ td {
 	text-align: center;
 	color: #f06;
 }
+.Jg{
+	color: #f06;
+}
 .Jg:hover{
 	color: #dfdfdf;
 }
@@ -145,6 +151,9 @@ td {
 .anotherSite{
 	font-size: 20px;
 	padding-top: 5px;
+}
+.anotherSite{
+	color: #f06;
 }
 .anotherSite:hover{
 	color: #dfdfdf;
